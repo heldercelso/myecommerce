@@ -1,42 +1,42 @@
-## Introdução
+## Introduction
 
-Este ecommerce foi desenvolvido majoritariamente em Django com banco de dados PostgreSQL e tem como objetivo
-cobrir todas as funcionalidades básicas de um comércio eletrônico desde login e cadastro de usuários até o
-pagamento dos produtos.
+This ecommerce was developed mostly in Django with PostgreSQL database and aims to
+cover all the basic functionalities of an e-commerce from login and user registration to the
+payment of the products.
 
 
-## Tecnologias
+## Technologies
 
-A implementação foi realizada utilizando Python na versão 3.7 tendo como bibliotecas principais as seguintes:
+The implementation was carried out using Python version 3.7 with the following main libraries:
 
  - django
  - mercadopago
  - pytest
  - coverage
 
-Outras linguagens/tecnologias utilizadas:
+Other languages/technologies used:
 
  - Front-end: Javascript/HTML/CSS
  - Docker
 
-### Estrutura
+### Structure
 
 ```shell
 .
-├── conftest.py                                                           # arquivo de fixture para o pytest
-├── docker_entrypoint.sh                                                  # Entrypoint para o docker
+├── conftest.py                                                           # pytest fixture file
+├── docker_entrypoint.sh                                                  # docker Entrypoint
 ├── docker-compose.yaml                                                   # docker-compose
-├── environment.env                                                       # variáveis de ambiente para o docker-compose
-├── Dockerfile                                                            # Arquivo de deploy
-├── pytest.ini                                                            # arquivo de setup do pytest
+├── environment.env                                                       # environment variables
+├── Dockerfile                                                            # docker build file
+├── pytest.ini                                                            # pytest setup
 ├── README.md
-├── requirements.txt                                                      # bibliotecas
-├── ecommerce                                                             # projeto do django
+├── requirements.txt                                                      # libraries
+├── ecommerce                                                             # django project
 │   ├── asgi.py
 │   ├── settings.py
 │   ├── urls.py
 │   └── wsgi.py
-├── main_app                                                              # aplicação django principal
+├── main_app                                                              # main django application
 │   ├── templatetags
 │   │   └── cart_template_tags.py
 │   ├── tests
@@ -52,8 +52,8 @@ Outras linguagens/tecnologias utilizadas:
 │   ├── urls.py
 │   ├── utils.py
 │   └── views.py
-├── media_root                                                            # armazenando das imagens
-├── mercadopago_payment                                                   # aplicação django para o pagamento (mercadopago)
+├── media_root                                                            # product image storage
+├── mercadopago_payment                                                   # django application for payments (mercadopago)
 │   ├── tests
 │   │   ├── factories.py
 │   │   ├── test_forms.py
@@ -67,81 +67,79 @@ Outras linguagens/tecnologias utilizadas:
 │   ├── urls.py
 │   ├── utils.py
 │   └── views.py
-├── postgres_data                                                         # banco de dados
-├── static                                                                # armazenando dos arquivos estáticos (css/js/...)
-└── templates                                                             # armazenando do front-end (html)
+├── postgres_data                                                         # database
+├── static                                                                # static file storage (css/js/...)
+└── templates                                                             # front-end storage (html)
 ```
 
 
-## Executando o projeto:
+## Running the project
 
-Para executar o projeto é necessário ter instalado em seu ambiente `docker` e `docker-compose`. Mas antes é necessário preencher o arquivo environment.env na raiz do projeto.
-
-
+To run the project it is necessary to have `docker` and `docker-compose` installed in your environment. But first it is necessary to fill the environment.env file in the project root.
 
 ```shell
-# Para buildar e executar, use o comando:
+# Command to build and execute:
 $ docker-compose up
 
-# Apenas buildar, execute:
+# Only build:
 $ docker-compose build
 
-# Para desativar:
+# Turn-off command:
 $ docker-compose down
 ```
 
-A partir desse ponto todos os containers estarão disponíveis.
-Para acessar a aplicação basta abrir em seu navegador o endereço `http://localhost:8000`.
+From that point on, all containers will be available.
+To access the application, just open the address `http://localhost:8000` in your browser.
 
-### Lidando com o projeto
+### Handling the project
 
-Para adicionar produtos a loja:
+To add products to the store:
 
-1. Crie um superuser:
+1. Create a superuser:
 ```shell
-# Criar superuser (admin), execute o comando e preencha nome de usuário, email e senha:
+# Create superuser (admin), run the command and fill username, email and password:
 $ docker exec -ti web createsuperuser
 ```
-2. Abra o navegador e acesse `localhost:8000/admin`, em seguida faça login com o usuário criado anteriormente.
 
-3. Já logado no painel de admin, vá em Produtos e preencha os campos.
+2. Open the browser and go to `localhost:8000/admin`, then login with the user created earlier.
+
+3. Once logged into the admin panel, go to Products and fill in the fields.
+
+### Configuring MercadoPago
+
+ 1. Create a MercadoPago account: https://www.mercadopago.com.br/developers
+ 2. Create test keys at: https://www.mercadopago.com.br/developers/panel/credentials
+ 2. Copy keys and fill in the environment.env: `MERCADO_PAGO_PUBLIC_KEY` and `MERCADO_PAGO_ACCESS_TOKEN`
+
+NOTE: To put Mercadopago into production, activate the production credentials in the same link mentioned above and use the keys.
 
 
-### Configurando MercadoPago
+## Development
 
- 1. Criar conta MercadoPago: https://www.mercadopago.com.br/developers
- 2. Criar chaves de teste em: https://www.mercadopago.com.br/developers/panel/credentials
- 2. Copiar chaves e preencher no environment.env: MERCADO_PAGO_PUBLIC_KEY e MERCADO_PAGO_ACCESS_TOKEN
+The structure contained in the `docker-compose.yaml` file provides separate containers for the Django project and the database (PostgreSQL).
 
-OBS: Para colocar o Mercadopago pagamentos em produção ative as credenciais de produção no mesmo link mencionado acima e use as chaves.
+### Database
 
+All database-related changes must be made using Django's own ORM. To create a new migration just run `docker exec -ti web python manage.py makemigrations` and `docker exec -ti web python manage.py migrate`.
 
-## Desenvolvimento
+### Tests
 
-A estrutura contida no arquivo `docker-compose.yaml` fornece containers distintos para o projeto Django e o banco de dados.
-
-### Banco de dados
-
-Todas as alterações relacionadas ao banco de dados devem ser feitas utilizando o ORM do próprio Django. Para criar uma nova migração basta executar o comando `docker exec -ti web python manage.py makemigrations` e `docker exec -ti web python manage.py migrate`.
-
-### Testes
-
-Para executar os testes basta inserir os seguintes comandos no seu terminal:
+To run the tests, simply enter the following commands in your terminal:
 
 ```shell
-# Executa os testes com coverage para gerar o relatório de cobertura:
+# Run the tests with coverage to generate the coverage report:
 $ docker exec -ti web coverage run -m pytest -vx
 
-# Exibe o relatório e lista as linhas que não estão cobertas pelos testes:
+# Display the report and list the lines that are not covered by the tests:
 $ docker exec -ti web coverage report -i
 ```
 
-Atualmente esse projeto contém uma cobertura de testes de 70%.
+This project currently contains 70% of test coverage.
 
-### Melhorias que podem ser feitas
+### Improvements that can be made
 
-- Adicionar cálculo do frete e prazo de entrega;
-- Adicionar outros meios de pagamento:
+- Add freight calculation and delivery time;
+- Add other payment methods:
    https://www.mercadopago.com.br/developers/pt/docs/checkout-api/payment-methods/other-payment-methods
-- Salvar e obter cartões do usuário no mercadopago;
-- Traduzir Front-end.
+- Save and get user credit-cards on MercadoPago;
+- Translate Front-end.
