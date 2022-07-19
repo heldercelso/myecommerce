@@ -23,14 +23,6 @@ Other languages/technologies used:
 
 ```shell
 .
-├── conftest.py                                                           # pytest fixture file
-├── docker_entrypoint.sh                                                  # docker Entrypoint
-├── docker-compose.yaml                                                   # docker-compose
-├── environment.env                                                       # environment variables
-├── Dockerfile                                                            # docker build file
-├── pytest.ini                                                            # pytest setup
-├── README.md
-├── requirements.txt                                                      # libraries
 ├── ecommerce                                                             # django project
 │   ├── asgi.py
 │   ├── settings.py
@@ -69,7 +61,16 @@ Other languages/technologies used:
 │   └── views.py
 ├── postgres_data                                                         # database
 ├── static                                                                # static file storage (css/js/...)
-└── templates                                                             # front-end storage (html)
+├── templates                                                             # front-end storage (html)
+├── conftest.py                                                           # pytest fixture file
+├── docker-compose.yaml                                                   # docker-compose
+├── docker_entrypoint.sh                                                  # docker Entrypoint
+├── Dockerfile                                                            # docker build file
+├── environment.env                                                       # environment variables
+├── manage.py
+├── pytest.ini                                                            # pytest setup
+├── README.md
+└── requirements.txt                                                      # libraries
 ```
 
 
