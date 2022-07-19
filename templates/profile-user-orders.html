@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load cart_template_tags %}
+
+{% block content %}
+  <!--Main layout-->
+  <main class="mt-1">
+    <div class="container wow fadeIn">
+
+      <!-- Heading -->
+      <h2 class="my-5 h2 text-center">Sua Conta</h2>
+
+      {% include 'profile-menu.html' %}
+
+      <div id="user_orders" class="col-md-8" style="padding-bottom: 150px;">
+        <!--Card-->
+        {% if user_orders %}
+          {% for user_order in user_orders reversed %}
+              <hr>
+              <div class="card container" style="cursor: pointer;" onclick="if (document.getElementById('order_info{{forloop.counter}}').style.display == 'none') {document.getElementById('order_info{{forloop.counter}}').style.display = 'block';} else {document.getElementById('order_info{{forloop.counter}}').style.display = 'none'}">
+                <div class="card-body">
+                  <div class="card-text float-right">Clique para abrir</div>
+                  {{ forloop.counter}}
+                  <div class="card-title">Código do Pedido: <b>{{ user_order.ref_code }}</b></div>
+
+                  <div class="card-text">Produtos:</div>
+                  {% for item in user_order.items.all %}
+                    <div class="card-text ml-3">- {{ item }}</div>
+                  {% endfor %}
+
+                  {% if user_order.finished_date %}
+                    <div class="card-text float-right">Finalizado em: {{ user_order.finished_date }}</div>
+                  {% else %}
+                    <div class="card-text float-right">Finalizado em: Não finalizado</div>
+                  {% endif %}
+
+                  <div class="card-text float-right" style="clear: both;"><b>Andamento</b>:
+                    {% if user_order.on_the_road and not user_order.delivered %}
+                      A caminho.
+                    {% elif user_order.delivered %}
+                      Pedido entregue.
+                    {% elif user_order.paid %}
+                      Pedido em separação.
+                    {% else %}
+                      Aguardando pagamento.
+                    {% endif %}
+                  </div>
+
+
+                  <div id="order_info{{forloop.counter}}" style="display: none;">
+                    <div class="card-text">Data de início: {{ user_order.start_date }}</div>
+
+                    <div class="card-text">Endereço de Entrega:</div>
+                      <div class="card-text ml-3">- {{ user_order.billing_address.address }}, {{ user_order.billing_address.number }} - {{ user_order.billing_address.zipcode }}</div>
+                      <div class="card-text ml-3">- {{ user_order.billing_address.city }}, {{ user_order.billing_address.state }}</div>
+
+                    <div class="card-text">Valor total: <b>{{ user_order.get_total|currency_format }}</b></div>
+                    <div class="card-text">Pagamento:
+                    {% if user_order.payment.mercado_pago_id %}
+                      <div class="card-text ml-3">- Cartão: {{ user_order.payment.payment_method_id }} - Parcelas: {{ user_order.payment.installments }} - Status: {{ user_order.payment.mercado_pago_status }}</div>
+                      </div>
+                    {% else %}
+                        Não efetuado.</div>
+                    {% endif %}
+
+                    {% if user_order.coupon %}
+                      <div class="card-text">CUPOM utilizado: {{ user_order.coupon }}</div>
+                    {% endif %}
+
+                    {% if user_order.refund_requested %}
+                      <div class="card-text">Pedido de refundo: Sim</div>
+                    {% elif not user_order.refund_requested %}
+                      <div class="card-text">Pedido de refundo: Não</div>
+                    {% endif %}
+                    {% if user_order.payment.mercado_pago_id %}
+                      <a class="float-right btn btn-dark btn-sm" href="{% url 'refund-request' user_order.ref_code %}">Pedir Refundo</a>
+                    {% endif %}
+                  </div>
+                  
+                </div>
+              </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+
+    </div>
+  </main>
+  <!--Main layout-->
+{% endblock %}

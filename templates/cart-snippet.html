@@ -1,0 +1,65 @@
+{% load cart_template_tags %}
+
+<!-- Heading -->
+<h4 class="d-flex justify-content-between align-items-center mb-3">
+    <span class="text-muted">Carrinho</span>
+    <span class="badge badge-secondary badge-pill">{{ order.get_total_items }}</span>
+</h4>
+
+<!-- Cart -->
+<ul class="list-group mb-3 z-depth-1">
+    {% for product in order.items.all %}
+    <li class="list-group-item d-flex justify-content-between lh-condensed" style="align-items: center;">
+        <span>{{ product.quantity }} x {{ product.item.title }}</span>
+
+        <div class="text-right">
+            {% if product.item.discount_price %}
+                {{ product.get_total_discount_price|currency_format }}
+                <div>
+                    <span class="badge badge-primary">Economia de ${{ product.get_discount_amount|currency_format }}</span>
+                </div>
+            {% else %}
+                {{ product.get_total_price|currency_format }}
+            {% endif %}
+        </div>
+
+    </li>
+    {% endfor %}
+
+    {% if order.coupon %}
+    <li class="list-group-item d-flex justify-content-between bg-light" style="align-items: center;">
+        <div class="text-success">
+            <h6 class="my-0">Cupom</h6>
+            <small>{{ order.coupon.code }}</small>
+        </div>
+        <span class="text-success">-{{ order.coupon.amount|currency_format }}</span>
+        {% if add_coupon_feature %}
+        <form class="" method="POST" action="{% url 'remove-coupon' 'checkout' %}">
+            {% csrf_token %}
+            <button class="btn btn-danger btn-sm" type="submit">X</button>
+        </form>
+        {% endif %}
+    </li>
+    {% endif %}
+
+    <li class="list-group-item d-flex justify-content-between">
+        <span>Total (BRL)</span>
+        <strong id="totalAmount">{{ order.get_total|currency_format }}</strong>
+    </li>
+</ul>
+<!-- Cart -->
+
+<!-- Promo code -->
+{% if add_coupon_feature %}
+<form class="card p-2" method="POST" action="{% url 'add-coupon' %}">
+    {% csrf_token %}
+    <div class="input-group">
+    {{ coupon_form.code }}
+    
+    <div class="input-group-append">
+        <button class="btn btn-secondary btn-md waves-effect m-0" type="submit">Aplicar</button>
+    </div>
+    </div>
+</form>
+<!-- Promo code -->
+{% endif %}

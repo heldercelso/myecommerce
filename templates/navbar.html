@@ -1,0 +1,101 @@
+{% load cart_template_tags %}
+<!-- Navbar -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark" >
+  <div class="container">
+
+    <!-- Brand -->
+    <a class="navbar-brand waves-effect" href="/">
+      <i class="fas fa-home text-primary"></i>
+      <strong class="black-text pl-1"><b>E-commerce</b></strong>
+    </a>
+
+    <!-- Collapse -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <!-- Left -->
+      <ul class="navbar-nav mr-auto">
+        <!--<li class="nav-item active">
+          <a class="nav-link waves-effect" href="/">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-effect" href="/products" target="_blank">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-effect" href="/checkout" target="_blank">Checkout</a>
+        </li>-->
+      </ul>
+
+      <!-- Center -->
+      <ul class="navbar-nav mr-auto">
+        <form action="{% url 'search-query' %}" method="get">
+          <div class="row mt-1">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <!-- <span class="input-group-prepend">
+                        <div class="input-group-text bg-secondary text-white border-right-0"><i class="fa fa-search"></i></div>
+                    </span> -->
+                    <input name="search_query" class="form-control py-2 border-left-0 border" style="width: 320px" placeholder="Digite sua busca..." type="search" value="{{query_str}}" id="search_query">
+                     <!-- onkeypress="if(this.value.length==0){document.getElementById('search_button').disabled = true;}else{document.getElementById('search_button').disabled = false;}"> -->
+                    <span class="input-group-append">
+                    <button id="search_button" class="btn bg-primary btn-outline-light bg-border-left-0 border" type="submit">
+                      <i class="fas fa-search"></i>
+                      <!-- onclick="if(document.getElementById('search_query').length>0){document.getElementById('search_button').disabled = false;}" disabled> -->
+                        
+                    </button>
+                  </span>
+                </div>
+            </div>
+          </div>
+        </form>
+      </ul>
+
+      <!-- Right -->
+      <ul class="navbar-nav nav-flex-icons text-center ml-1">
+        {% if request.user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link waves-effect" href="{% url 'account_logout' %}">
+            <i class="fas fa-sign-in-alt text-danger"></i>
+            <span class="clearfix d-sm-inline-block"> Sair </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-effect" href="{% url 'profile-user-data' %}">
+            <i class="fas fa-user-circle text-white"></i>
+            <span class="clearfix d-sm-inline-block"> Meu Perfil </span>
+          </a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link waves-effect" href="{% url 'account_login' %}">
+            <i class="fas fa-sign-in-alt text-success"></i>
+            <span class="clearfix d-sm-inline-block"> Entrar </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-effect" href="{% url 'account_signup' %}">
+            <i class="fas fa-sign-in-alt text-white"></i>
+            <span class="clearfix d-sm-inline-block"> Registrar </span>
+          </a>
+        </li>
+        {% endif %}
+        <li class="nav-item">
+          <a class="nav-link waves-effect" href="{% url 'mycart' %}">
+            <i class="fas fa-shopping-cart text-warning"></i>
+            <span class="clearfix d-sm-inline-block"> Carrinho </span>
+            <span class="badge bg-danger text-white z-depth-1 mr-1" style="width: 25px"> {{ request|count_cart_items }} </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+<!-- Navbar -->

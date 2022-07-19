@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% load cart_template_tags %}
+
+{% block content %}
+<!--Main layout-->
+<main>
+  <div class="container dark-grey-text mt-5">
+
+    <!--Grid row-->
+    <div class="row wow fadeIn">
+
+      <!--Grid column-->
+      <div class="col-md-6 mb-4 text-center">
+
+        <img src="{{ product.image.url }}" width="250px" height="150px" class="img-fluid" alt="">
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-md-6 mb-4">
+
+        <!--Content-->
+        <div class="p-4">
+
+          <div class="mb-3">
+            <a href="">
+              <span class="badge purple mr-1">{{ product.category.title }}</span>
+            </a>
+          </div>
+
+          <p class="lead font-weight-bold">
+            {{ product.title }}
+            {% if product.get_label_display %}
+              {% if product.label == 'N' %}
+              <span class="badge badge-pill badge-primary">{{ product.get_label_display }}</span>
+              {% elif product.label == 'D' %}
+              <span class="badge badge-pill badge-danger">{{ product.get_label_display }}</span>
+              {% elif product.label == 'P' %}
+              <span class="badge badge-pill badge-warning">{{ product.get_label_display }}</span>
+              {% endif %}
+            {% endif %}
+          </p>
+
+
+          <p class="lead">
+            {% if product.discount_price %}
+            <span class="mr-1">
+              <del>{{ product.price|currency_format }}</del>
+            </span>
+            <span>{{ product.discount_price|currency_format }}</span>
+            {% else %}
+            <span>{{ product.price|currency_format }}</span>
+            {% endif %}
+          </p>
+
+          {% if product.quantity > 0 %}
+            {% if orderitem == None %}
+              <a href="{{ product.get_add_item_to_cart_url }}" class="update-cart btn btn-primary btn-md my-0 p" data-action="add" data-slug="{{ product.slug }}" data-pk="{{ product.pk }}">
+                Adicionar ao carrinho
+                <i class="fas fa-shopping-cart ml-1"></i>
+              </a>
+            {% else %}
+                <a href="{{ product.get_remove_item_from_cart_url }}"><i class="update-cart fas fa-minus mr-2" data-action="remove" data-slug="{{ product.slug }}" data-pk="{{ product.pk }}"></i></a>
+                {{ orderitem.quantity }}
+                {% if product.quantity > orderitem.quantity %}
+                  <a href="{{ product.get_add_item_to_cart_url }}"><i class="update-cart fas fa-plus ml-2" data-action="add" data-slug="{{ product.slug }}" data-pk="{{ product.pk }}"></i></a>
+                {% endif %}
+            {% endif %}
+            <p class="mt-3">Quantidade disponível: {{ product.quantity }}</p>
+          {% else %}
+            <p>Produto indisponível no momento!</p>
+          {% endif %}
+          
+        </div>
+        <!--Content-->
+
+      </div>
+      <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+    <hr>
+
+    <!--Grid row-->
+    <div class="row d-flex justify-content-center wow fadeIn">
+
+      <!--Grid column-->
+      <div class="col-md-6 text-center">
+
+        <h4 class="my-4 h4">Descrição</h4>
+
+        <p>{{ product.description }}</p>
+
+      </div>
+      <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+    <!--Grid row-->
+    <hr>
+
+    {% if related_items %}
+    <h5 class="mt-5 mb-3 text-center">Produtos Relacionados</h5>
+
+    <div class="mb-3 row d-flex justify-content-center wow fadeIn">
+      {% for related_prod in related_items %}
+        
+        <div class="card" style="border-style:ridge; margin: 0;">
+          <a href="{{ related_prod.get_url }}">
+            <img src="{{ related_prod.image.url }}" width="150px" class="img-fluid">
+          </a>
+          <div class="card-body text-center">
+            <h5>
+              <strong>
+                <a href="{{ related_prod.get_url }}" class="dark-grey-text">{{ related_prod.title }}</a>
+              </strong>
+            </h5>
+          </div>
+        </div>
+
+      {% endfor %}
+    </div>
+    {% endif %}
+    <!--Grid row-->
+
+  </div>
+</main>
+<!--Main layout-->
+{% endblock %}

@@ -1,0 +1,9 @@
+venv
+postgres_data
+static_root
+*.pyc
+__pycache__
+.pytest_cache
+db.sqlite3
+.coverage*
+merdia_root/*

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <!--Main layout-->
+  <main class="mt-1">
+    <div class="container wow fadeIn">
+
+      <!-- Heading -->
+      <h2 class="my-5 h2 text-center">Sua Conta</h2>
+
+      {% include 'profile-menu.html' %}
+
+      <div id="user_data" class="col-md-8 mb-4">
+        {% if user_form %}
+          <div id="user_info" class="card">
+            <form class="card-body" method="POST" action="{% url 'profile-user-data' %}">
+              {% csrf_token %}
+              {{ user_form|crispy }}
+              <div>
+                <a class="float-left btn btn-dark btn-lg" href="{% url 'account_change_password' %}">Mudar senha</a>
+                <button class="float-right btn btn-primary btn-lg" type="submit">Salvar alterações</button>
+              </div>
+            </form>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </main>
+  <!--Main layout-->
+{% endblock %}

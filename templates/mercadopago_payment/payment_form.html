@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+    {% with total_price=order.get_total %}
+
+    <div class="container my-3">
+        <h1 class="font-weight-bold text-center mb-3">Pagamento com cartão de crédito</h1>
+        <div class="row">
+            <div class="col-lg-6" style="border: 0px solid">
+                {% if form.errors %}
+                    {% for field in form %}
+                        {% for error in field.errors %}
+                        <div class="alert alert-danger">
+                            <strong>{{ field.name }}: {{ error|escape }}</strong>
+                        </div>
+                        {% endfor %}
+                    {% endfor %}
+                    {% for error in form.non_field_errors %}
+                    <div class="alert alert-danger">
+                        <strong>{{ error|escape }}</strong>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+                <p id="error-message" class="alert alert-danger text-center" style="display: none;"></p>
+                <!-- the 'payments:process' on the url needed to be configured in the namespace on the urls that included the payments app: namespace="payments" -->
+                <button id="button-reload" class="center btn btn-info btn-lg mb-3" style="font-size:18px; display: none; margin: 0 auto;">Recarregar <i class="fa fa-refresh"></i></button>
+                
+    
+                 <form id="form-checkout">
+                    <div class="row">
+                        <div class="form-group col-12 mb-0">
+                            <div class="row">
+                                <div class="form-group col-8">
+                                    <!-- <label for="form-checkout__cardNumber">Número do Cartão</label> -->
+                                    <!-- <input type="text" name="cardNumber" id="form-checkout__cardNumber" class="form-control"/> -->
+                                    <!-- <input id="form-checkout__cardNumber" type="text" class="form-control" value="4235647728025682" /> -->
+                                    <input id="form-checkout__cardNumber" type="text" class="form-control" />
+                                </div>
+                                <div class="form-group col-4">
+                                    <select name="issuer" id="form-checkout__issuer" class="form-control"></select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="form-group col-12 mb-0">
+                            <div class="row">
+                                <div class="form-group col-6">
+                                    <!-- <label for="form-checkout__cardExpirationDate">Data de Vencimento</label> -->
+                                    <!-- <input type="text" name="cardExpirationDate" id="form-checkout__cardExpirationDate" class="form-control" maxlength="7" value=""/> -->
+                                    <!-- <input id="form-checkout__expirationDate" type="text" class="form-control" maxlength="7" value="11/2025" /> -->
+                                    <input id="form-checkout__expirationDate" type="text" class="form-control" maxlength="7" />
+                                </div>
+                                <div class="form-group col-6">
+                                    <!-- <input id="form-checkout__securityCode" type="text" class="form-control" maxlength="4" value="123" /> -->
+                                    <input id="form-checkout__securityCode" type="text" class="form-control" maxlength="4" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <!-- <input type="text" class="form-control" name="cardholderName" id="form-checkout__cardholderName" value="APRO" oninput="this.value = this.value.toUpperCase()"/> -->
+                        <input type="text" class="form-control" name="cardholderName" id="form-checkout__cardholderName" oninput="this.value = this.value.toUpperCase()"/>
+                    </div>
+    
+                    <div class="form-group">
+                        <!-- <input type="email" class="form-control" name="cardholderEmail" id="form-checkout__cardholderEmail" value="renan-moura85@formigueiromaquinas.com.br" /> -->
+                        <input type="email" class="form-control" name="cardholderEmail" id="form-checkout__cardholderEmail" />
+                        <!-- value="{{ order.user.email }}" -->
+                    </div>
+                    
+    
+                    <div class="row">
+                        <div class="form-group col-12 mb-0">
+                            <div class="row">
+                                <div class="form-group col-3">
+                                    <select name="identificationType" class="form-control" id="form-checkout__identificationType"></select>
+                                </div>
+                                <div class="form-group col-9">
+                                    <!-- <input type="text" name="identificationNumber" class="form-control" id="form-checkout__identificationNumber" value="09800775838" /> -->
+                                    <input type="text" name="identificationNumber" class="form-control" id="form-checkout__identificationNumber" />
+                                    <!-- value="{{ order.user.userprofile.cpf }}" -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <select name="installments" class="form-control" id="form-checkout__installments"></select>
+                    </div>
+
+                    <button type="submit" id="form-checkout__submit" class="btn btn-success btn-lg btn-block">Pagar</button>
+                    <div class="form-group">
+                        <progress value="0" class="progress-bar" style="width: 100%; background-color: revert;">Processando...</progress>
+                    </div>
+                    
+                    <input type="hidden" id="transaction_amount" name="transaction_amount" value='{{ total_price|stringformat:".2f" }}'/>
+                    <!-- <input type="hidden" id="token" name="token" />
+                    <input type="hidden" id="paymentMethodId" name="paymentMethodId" />
+                    <input type="hidden" id="issuer" name="issuer" data-checkout="issuer" class="form-control" /> -->
+                </form>
+             
+                <!-- <div id="fail-response"></div> -->
+           </div>
+   
+           <div class="col-lg-6">
+               <div class="card border-0 bg-light p-4">
+                   {% include "cart-snippet.html" %}
+               </div>
+           </div>
+       </div>
+   </div>
+   {% endwith %}
+{% endblock %}
+
+{% block extra_scripts %}
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script>
+    const mp = new MercadoPago('{{ publishable_key }}', {
+        locale: 'pt-BR'
+    })
+    </script>
+    <script type="text/javascript" src="{% static 'js/process-payment.js' %}"></script>
+
+{% endblock %}

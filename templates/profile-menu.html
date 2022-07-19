@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-3 mb-4">
+    <hr class="mb-4">
+    <div class="card">
+
+      <a class="btn btn-dark btn-lg text-left" href="{% url 'profile-user-data' %}">
+        <i class="fas fa-id-card" style='color: white'></i>
+        Dados Pessoais
+      </a>
+
+      <a class="btn btn-dark btn-lg text-left" href="{% url 'profile-user-address' 'read' 'profile' %}">
+        <i class="fas fa-address-book" style='color: white'></i>
+        Endereços
+      </a>
+
+      <a class="btn btn-dark btn-lg text-left"  href="{% url 'profile-user-orders' %}">
+        <i class="fas fa-list-ol" style='color: white'></i>
+        Pedidos
+      </a>
+
+    </div>
+  </div>

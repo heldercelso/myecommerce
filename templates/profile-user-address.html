@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block extra_scripts %}
+<script type="text/javascript" src="{% static 'js/order-form.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+  <!--Main layout-->
+  <main class="mt-1">
+    <div class="container wow fadeIn">
+
+      <!-- Heading -->
+      <h2 class="my-5 h2 text-center">Sua Conta</h2>
+
+      {% include 'profile-menu.html' %}
+
+      <div id="addresses" class="col-md-8 mb-4">
+        <!--Card-->
+        {% if billing_address_default %}
+          <div class="card container">
+            <div class="card-body">
+              <div class="float-right col-md-4 mb-4">Endereço Padrão de Envio</div>
+              <div class="card-text">Cidade: {{ billing_address_default.city }}, Estado: {{ billing_address_default.state }}</div>
+              <div class="card-text">Endereço: {{ billing_address_default.address }}, Número: {{ billing_address_default.number }}</div>
+              <div class="card-text">CEP: {{ billing_address_default.zipcode }}</div>
+              <form method="POST" action="{% url 'profile-user-address' 'delete' billing_address_default.address billing_address_default.number billing_address_default.zipcode 'profile' %}">
+                {% csrf_token %}
+                <button class="btn btn-danger btn-sm float-right" type="submit">Deletar</button>
+              </form>
+            </div>
+          </div>
+        {% endif %}
+
+        {% if billing_addresses %}
+          <div class="d-flex justify-content-center">
+            <button class="btn btn-primary btn-lg btn-block col-md-6" onclick="{document.getElementById('change_address').style.display = 'block';}">
+              Definir Endereço Padrão
+            </button>
+          </div>
+          <div id="change_address" style="display: none;">
+          {% for billing in billing_addresses %}
+              <div class="card container mb-1">
+                <div class="card-body">
+                  <div class="float-right">
+                    <form method="POST" action="{% url 'profile-user-address' 'update' billing.address billing.number billing.zipcode 'profile' %}">
+                      {% csrf_token %}
+                      <button class="btn btn-success btn-md float-right" type="submit">Tornar padrão</button>
+                    </form>
+                    <form method="POST" action="{% url 'profile-user-address' 'delete' billing.address billing.number billing.zipcode 'profile' %}">
+                      {% csrf_token %}
+                      <button class="btn btn-danger btn-sm float-right" type="submit">Deletar</button>
+                    </form>
+                  </div>
+                <div style="width: fit-content;">{{forloop.counter}}</div>
+                <div class="card-text">Cidade: {{ billing.city }}, Estado: {{ billing.state }}</div>
+                <div class="card-text">Endereço: {{ billing.address }}, Número: {{ billing.number }}</div>
+                <div class="card-text">CEP: {{ billing.zipcode }}</div>
+                </div>
+              </div>
+          {% endfor %}
+          </div>
+        {% endif %}
+        {% if not billing_addresses and not billing_address_default %}
+          <div class="text-center card-title">Não há endereços registrados.</div>
+        {% endif %}
+
+        {% if billing_addresses|length < 5 %}
+          <div id="add_address" class="d-flex justify-content-center">
+            <button class="btn btn-dark btn-lg btn-block col-md-6" onclick="document.getElementById('new_address').style.display = 'block';">
+              Adicionar Endereço
+            </button>
+          </div>
+        {% else %}
+          <div class="text-center card-title mt-3">Para cadastrar novos endereços, delete um dos existentes.<br>Limite máximo atingido (5).</div>
+        {% endif %}
+        {% if new_address_form %}
+          {% if display_form == 'none' %}
+          <div id="new_address" class="card" style="display: none; margin-bottom: 120px;">
+          {% elif display_form == 'block' %}
+          <div id="new_address" class="card" style="display: block; margin-bottom: 120px;">
+          {% endif %}
+            <form class="card-body" method="POST" action="{% url 'profile-user-address' 'create' 'profile' %}">
+              {% csrf_token %}
+              {{ new_address_form|crispy }}
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Adicionar novo Endereço</button>
+            </form>
+          </div>
+        {% endif %}
+      </div>
+
+    </div>
+  </main>
+  <!--Main layout-->
+{% endblock %}

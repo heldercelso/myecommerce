@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load cart_template_tags %}
+
+{% block content %}
+
+    <div class="mt-3 table-responsive text-nowrap container">
+    <h2 class="text-center">Carrinho</h2>
+    <table class="table">
+        <thead>
+        <tr class="text-center">
+            <th scope="col" style="width: 5%">#</th>
+            <th scope="col" style="width: 18%">Imagem</th>
+            <th scope="col" style="width: 18%">Produto</th>
+            <th scope="col" style="width: 18%">Preço</th>
+            <th scope="col" style="width: 18%">Quantitade</th>
+            <th scope="col" style="width: 18%">Total</th>
+            <th scope="col" style="width: 5%"></th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for order_item in user_order.items.all %}
+        <tr class="text-center">
+            <th scope="row" style="vertical-align: middle;">{{ forloop.counter }}</th>
+            <td style="vertical-align: middle;"><img src="{{ order_item.item.image.url }}" width="50px" height="50px" class="img-fluid" alt=""></td>
+            <td style="vertical-align: middle;">{{ order_item.item.title }}</td>
+            <td style="vertical-align: middle;">
+                
+                {% if order_item.item.discount_price %}
+                    {{ order_item.item.discount_price|currency_format }}
+                    <div>
+                        <span class="badge badge-primary"><del>{{ order_item.item.price|currency_format }}</del></span>
+                    </div>
+                {% else %}
+                    {{ order_item.item.price|currency_format }}
+                {% endif %}
+            </td>
+            <td style="vertical-align: middle;">
+                <div>
+                    <a href="{% url 'remove-item-from-cart' order_item.item.slug order_item.item.pk 'cart' %}">
+                        <i class="update-cart fas fa-minus mr-2" data-action="remove" data-slug="{{ order_item.item.slug }}" data-pk="{{ order_item.item.pk }}"></i>
+                    </a>
+                    {{ order_item.quantity }}
+                    {% if order_item.item.quantity > order_item.quantity %}
+                        <a href="{% url 'add-item-to-cart' order_item.item.slug order_item.item.pk 'cart' %}">
+                            <i class="update-cart fas fa-plus ml-2" data-action="add" data-slug="{{ order_item.item.slug }}" data-pk="{{ order_item.item.pk }}"></i>
+                        </a>
+                    {% else %}
+                        <i class="update-cart fas fa-plus ml-2" style='color: lightgray;'></i>
+                    {% endif %}
+                    {% if order_item.item.quantity < order_item.quantity %}
+                        <div style="color: red;">Disponíveis: {{ order_item.item.quantity }}</div>
+                    {% else %}
+                        <div>Disponíveis: {{ order_item.item.quantity }}</div>
+                    {% endif %}
+                    
+                </div>
+            </td>
+            <td style="vertical-align: middle;">
+                {% if order_item.item.discount_price %}
+                    {{ order_item.get_total_discount_price|currency_format }}
+                    <div>
+                        <span class="badge badge-primary">Economia de {{ order_item.get_discount_amount|currency_format }}</span>
+                    </div>
+                    
+                {% else %}
+                    {{ order_item.get_total_price|currency_format }}
+                {% endif %}
+            </td>
+            <td style="vertical-align: middle;">
+                <a style='color: red;' href="{% url 'delete-item-from-cart' order_item.item.slug order_item.item.pk 'cart' %}">
+                    <i class="update-cart fas fa-trash float-right" data-action="delete" data-slug="{{ order_item.item.slug }}" data-pk="{{ order_item.item.pk }}"></i>
+                </a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td class='text-center' colspan='6'>Carrinho vazio!</td>
+        </tr>
+        <tr>
+            <td colspan="7">
+            <a class='btn btn-primary float-right' href='/'>Continuar comprando</a>
+            </td>
+        </tr>
+        {% endfor %}
+        
+        {% if user_order.coupon %}
+        <tr>
+            <td colspan="5" style="vertical-align: middle;"><b>Cupom Aplicado: </b><small class="text-success">{{ user_order.coupon.code }}</small></td>
+            <td class="text-center" style="vertical-align: middle;"><b>-{{ user_order.coupon.amount|currency_format }}</b></td>
+            <td>
+                <form class="" method="POST" action="{% url 'remove-coupon' 'mycart' %}">
+                {% csrf_token %}
+                <button class="btn btn-danger btn-sm" type="submit">X</button>
+            </td>
+            </form>
+        </tr>
+        {% endif %}
+
+        {% if user_order.get_total %}
+        <tr>
+            <td colspan="6"><b>Total do carrinho</b></td>
+            <td><b>{{ user_order.get_total|currency_format }}</b></td>
+        </tr>
+        <tr>
+            <td colspan="7">
+            <a class='btn btn-warning float-right ml-2' href="{% url 'checkout' %}">Finalizar compra</a>
+            <a class='btn btn-primary float-right' href='/'>Continuar comprando</a>
+            </td>
+        </tr>
+        {% endif %}
+        
+        </tbody>
+    </table>
+
+    </div>
+
+{% endblock content %}
+
+
