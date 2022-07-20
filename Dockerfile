@@ -17,7 +17,7 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 RUN pip install --upgrade pip
 
 # some features needed to install requirements.txt on the alpine linux:
-RUN apk update && apk add --no-cache postgresql postgresql-dev gcc python3-dev musl-dev bash jpeg-dev zlib-dev libffi libffi-dev
+RUN apk update && apk add --no-cache postgresql postgresql-dev gcc python3-dev musl-dev bash jpeg-dev zlib-dev libffi libffi-dev graphviz graphviz-dev ttf-freefont
 # to enable CRIPTOGRAPHY include: libffi-dev openssl-dev cargo libxml2-dev libxslt-dev
 # to use postgre psql tool (to access db content directly) include postgresql on the list
 

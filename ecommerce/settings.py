@@ -58,6 +58,9 @@ INSTALLED_APPS = [
     # mercadopago - used to perform payments
     'mercadopago_payment.apps.MercadopagoPaymentConfig',
 
+    # to generate database diagram
+    'django_extensions',
+
     # 'corsheaders'
 ]
 

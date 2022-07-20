@@ -23,14 +23,6 @@ Other languages/technologies used:
 
 ```shell
 .
-├── conftest.py                                                           # pytest fixture file
-├── docker_entrypoint.sh                                                  # docker Entrypoint
-├── docker-compose.yaml                                                   # docker-compose
-├── environment.env                                                       # environment variables
-├── Dockerfile                                                            # docker build file
-├── pytest.ini                                                            # pytest setup
-├── README.md
-├── requirements.txt                                                      # libraries
 ├── ecommerce                                                             # django project
 │   ├── asgi.py
 │   ├── settings.py
@@ -69,7 +61,16 @@ Other languages/technologies used:
 │   └── views.py
 ├── postgres_data                                                         # database
 ├── static                                                                # static file storage (css/js/...)
-└── templates                                                             # front-end storage (html)
+├── templates                                                             # front-end storage (html)
+├── conftest.py                                                           # pytest fixture file
+├── docker-compose.yaml                                                   # docker-compose
+├── docker_entrypoint.sh                                                  # docker entrypoint
+├── Dockerfile                                                            # docker build file
+├── environment.env                                                       # environment variables
+├── manage.py
+├── pytest.ini                                                            # pytest setup
+├── README.md
+└── requirements.txt                                                      # libraries
 ```
 
 
@@ -121,8 +122,14 @@ The structure contained in the `docker-compose.yaml` file provides separate cont
 ### Database
 
 All database-related changes must be made using Django's own ORM. To create a new migration just run `docker exec -ti web python manage.py makemigrations` and `docker exec -ti web python manage.py migrate`.
+The model diagram can be seen in the root directory of this project as `database_diagram.png`.
 
-### Tests
+Command to generate database diagram (it needs django-extensions and pygraphviz libs):
+```shell
+$ docker exec -ti web python manage.py graph_models main_app mercadopago_payment -g -o database_diagram.png
+```
+
+## Tests
 
 To run the tests, simply enter the following commands in your terminal:
 
@@ -134,9 +141,14 @@ $ docker exec -ti web coverage run -m pytest -vx
 $ docker exec -ti web coverage report -i
 ```
 
+To validate templates:
+```shell
+$ docker exec -ti web python manage.py validate_templates
+```
+
 This project currently contains 70% of test coverage.
 
-### Improvements that can be made
+## Improvements that can be made
 
 - Add freight calculation and delivery time;
 - Add other payment methods:
