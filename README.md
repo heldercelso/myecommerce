@@ -64,7 +64,7 @@ Other languages/technologies used:
 ├── templates                                                             # front-end storage (html)
 ├── conftest.py                                                           # pytest fixture file
 ├── docker-compose.yaml                                                   # docker-compose
-├── docker_entrypoint.sh                                                  # docker entrypoint
+├── docker_entrypoint.sh                                                  # docker Entrypoint
 ├── Dockerfile                                                            # docker build file
 ├── environment.env                                                       # environment variables
 ├── manage.py
