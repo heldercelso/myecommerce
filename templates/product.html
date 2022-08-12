@@ -45,19 +45,19 @@
 
           <p class="lead">
             {% if product.discount_price %}
-            <span class="mr-1">
-              <del>{{ product.price|currency_format }}</del>
-            </span>
-            <span>{{ product.discount_price|currency_format }}</span>
+              <span class="mr-1">
+                <del>{{ product.price|currency_format }}</del>
+              </span>
+              <span>{{ product.discount_price|currency_format }}</span>
             {% else %}
-            <span>{{ product.price|currency_format }}</span>
+              <span>{{ product.price|currency_format }}</span>
             {% endif %}
           </p>
 
           {% if product.quantity > 0 %}
             {% if orderitem == None %}
               <a href="{{ product.get_add_item_to_cart_url }}" class="update-cart btn btn-primary btn-md my-0 p" data-action="add" data-slug="{{ product.slug }}" data-pk="{{ product.pk }}">
-                Adicionar ao carrinho
+                Comprar
                 <i class="fas fa-shopping-cart ml-1"></i>
               </a>
             {% else %}
@@ -91,7 +91,7 @@
 
         <h4 class="my-4 h4">Descrição</h4>
 
-        <p>{{ product.description }}</p>
+        <p>{{ product.description|safe|linebreaks }}</p>
 
       </div>
       <!--Grid column-->
@@ -108,16 +108,14 @@
     <div class="mb-3 row d-flex justify-content-center wow fadeIn">
       {% for related_prod in related_items %}
         
-        <div class="card" style="border-style:ridge; margin: 0;">
+        <div class="card text-center" style="border-style:ridge; margin: 2px;">
           <a href="{{ related_prod.get_url }}">
             <img src="{{ related_prod.image.url }}" width="150px" class="img-fluid">
           </a>
           <div class="card-body text-center">
-            <h5>
-              <strong>
-                <a href="{{ related_prod.get_url }}" class="dark-grey-text">{{ related_prod.title }}</a>
-              </strong>
-            </h5>
+            <a href="{{ related_prod.get_url }}" class="dark-grey-text">
+                <strong>{{ related_prod.title|truncatewords_html:5 }}</strong>
+            </a>
           </div>
         </div>
 

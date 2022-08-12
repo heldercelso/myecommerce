@@ -10,7 +10,7 @@
 <ul class="list-group mb-3 z-depth-1">
     {% for product in order.items.all %}
     <li class="list-group-item d-flex justify-content-between lh-condensed" style="align-items: center;">
-        <span>{{ product.quantity }} x {{ product.item.title }}</span>
+        <span>{{ product.quantity }} x {{ product.item.title|truncatewords_html:5 }}</span>
 
         <div class="text-right">
             {% if product.item.discount_price %}

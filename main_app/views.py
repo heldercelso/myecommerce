@@ -317,7 +317,7 @@ class CheckoutView(View):
 
 class HomeView(ListView):
     """ Homepage View """
-    paginate_by = 4
+    paginate_by = 8
     model = Item
     template_name = "home-page.html"
 
@@ -367,11 +367,12 @@ class HomeView(ListView):
             qs = qs.all()
         return qs, query_str
     
-    def get_context_data(self, **kwargs):
+    def get_context_data(self, *args, **kwargs):
         """ Including categories to context """
         context = super(HomeView, self).get_context_data(**kwargs)
         category_list = Category.objects.all()
         context['category_list'] = category_list
+
         return context
 
 

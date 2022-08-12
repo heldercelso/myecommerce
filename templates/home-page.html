@@ -4,13 +4,14 @@
 
 {% block extra_head %}
 <style>
-.text-block {
-  background-color: black;
-  color: white;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-}
+  /* used to show unavailable over the product */
+  .text-block {
+    background-color: black;
+    color: white;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
 </style>
 {% endblock %}
 
@@ -42,9 +43,9 @@
               </a>
             </li>
             {% for category in category_list %}
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'home-page' category.slug %}">{{ category.title }}</a>
-            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'home-page' category.slug %}">{{ category.title }}</a>
+              </li>
             {% endfor %}
 
           </ul>
@@ -64,7 +65,7 @@
 
           {% for product in object_list %}
           
-          <div class="col-lg-3 col-md-6 mb-4">
+          <div class="col-lg-3 col-md-4 mb-4" style="max-width: none;">
 
             <!--Card-->
             <div class="card">
@@ -73,9 +74,9 @@
               <div class="view overlay">
                 <a href="{{ product.get_url }}">
                 {% if product.quantity > 0 %}
-                  <img src="{{ product.image.url }}" height="250px" class="">
+                  <img src="{{ product.image.url }}" height="250px">
                 {% else %}
-                  <img src="{{ product.image.url }}" height="250px" class="" style="filter: grayscale(1);">
+                  <img src="{{ product.image.url }}" height="250px" style="filter: grayscale(1);">
                   <div class="text-block">
                     <h4>Indisponível</h4>
                   </div>
@@ -85,43 +86,55 @@
               <!--Card image-->
 
               <!--Card content-->
-              <div class="card-body text-center">
+              <div class="card-body text-center" style="min-height: 250px;">
                 <a href="{{ product.get_url }}" class="dark-grey-text">
                   <h5>
-                    <strong>{{ product.title }}</strong>
-
+                    <strong>{{ product.title|truncatewords_html:7 }}</strong>
+                    <br>
                     {% if product.get_label_display %}
+
                       {% if product.label == 'N' %}
-                      <span class="badge badge-primary">{{ product.get_label_display }}</span>
+                      <div class="badge badge-primary">{{ product.get_label_display }}</div>
                       {% elif product.label == 'D' %}
                       <div class="badge badge-danger">{{ product.get_label_display }}</div>
                       {% elif product.label == 'P' %}
                       <div class="badge badge-warning">{{ product.get_label_display }}</div>
                       {% endif %}
-                    <!-- <div class="badge badge-primary" style="visibility: hidden;">Normal</div> -->
+                    {% else %}
+                      <div class="badge badge-primary" style="visibility: hidden;">Normal</div>
                     {% endif %}
                   </h5>
                 </a>
-              
+
 
                 <!--Category & Title-->
-                <p style="font-size: 12px;">
+                <div style="font-size: 12px;">
                   {% if product.category %}
                     Categoria: <a href="{% url 'home-page' product.category.slug %}">{{ product.category }}</a>
                   {% else %}
                     Categoria: Outros
                   {% endif %}
-                </p>
+                </div>
 
-                <h4 class="font-weight-bold blue-text">
-                  <strong>
-                  {% if product.discount_price %}
-                    {{ product.discount_price|currency_format }}
-                  {% else %}
-                    {{ product.price|currency_format }}
-                  {% endif %}
-                </strong>
-                </h4>
+
+                {% if product.discount_price %}
+                  <del style="font-size: 12px;">{{ product.price|currency_format }}</del>
+                  <h4 class="font-weight-bold">
+                    <strong>{{ product.discount_price|currency_format }}</strong>
+                  </h4>
+                {% else %}
+                  <del style="visibility: hidden;">{{ product.price|currency_format }}</del>
+                  <h4 class="font-weight-bold">
+                    <strong>{{ product.price|currency_format }}</strong>
+                  </h4>
+                {% endif %}
+
+
+                <a href="{% url 'add-item-to-cart' product.slug product.pk 'cart' %}" class="update-cart btn btn-primary btn-block" data-action="add" data-slug="{{ product.slug }}" data-pk="{{ product.pk }}">
+                  Comprar
+                  <i class="fas fa-shopping-cart ml-1"></i>
+                </a>
+
 
               </div>
               <!--Card content-->

@@ -5,7 +5,7 @@
 
 {% block content %}
 
-    <div class="mt-3 table-responsive text-nowrap container">
+<div class="mt-5 table-responsive text-nowrap container">
     <h2 class="text-center">Carrinho</h2>
     <table class="table">
         <thead>
@@ -24,8 +24,8 @@
         {% for order_item in user_order.items.all %}
         <tr class="text-center">
             <th scope="row" style="vertical-align: middle;">{{ forloop.counter }}</th>
-            <td style="vertical-align: middle;"><img src="{{ order_item.item.image.url }}" width="50px" height="50px" class="img-fluid" alt=""></td>
-            <td style="vertical-align: middle;">{{ order_item.item.title }}</td>
+            <td style="vertical-align: middle;"><a href="{{ order_item.item.get_url }}"><img src="{{ order_item.item.image.url }}" width="50px" height="50px" class="img-fluid" alt="product"></a></td>
+            <td style="vertical-align: middle;"><a href="{{ order_item.item.get_url }}">{{ order_item.item.title|truncatewords_html:7 }}</a></td>
             <td style="vertical-align: middle;">
                 
                 {% if order_item.item.discount_price %}
@@ -115,8 +115,6 @@
         </tbody>
     </table>
 
-    </div>
+</div>
 
 {% endblock content %}
-
-
