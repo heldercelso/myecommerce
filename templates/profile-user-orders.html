@@ -24,7 +24,7 @@
 
                   <div class="card-text">Produtos:</div>
                   {% for item in user_order.items.all %}
-                    <div class="card-text ml-3">- {{ item }}</div>
+                    <div class="card-text ml-3">- {{ item|truncatewords_html:7 }}</div>
                   {% endfor %}
 
                   {% if user_order.finished_date %}
