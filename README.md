@@ -3,6 +3,7 @@
 This ecommerce was developed mostly in Django with PostgreSQL database and aims to
 cover all the basic functionalities of an e-commerce from login and user registration to the
 payment of the products.
+
 Project images: https://helder-portfolio.herokuapp.com/ecommerce-1/
 
 
