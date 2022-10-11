@@ -1,0 +1,1945 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2022-07-19T15:09:53.573Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "1",
+    "object_repr": "Blusa",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2022-08-11T17:46:54.467Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "1",
+    "object_repr": "Blusa",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2022-08-11T17:47:15.279Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "Teste",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2022-08-11T17:47:46.904Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "2",
+    "object_repr": "blusa",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2022-08-11T17:47:56.762Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "2",
+    "object_repr": "blusa",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2022-08-11T17:48:18.693Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "Teste",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2022-08-11T17:49:30.642Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "2",
+    "object_repr": "Processadores",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2022-08-11T17:49:50.351Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "3",
+    "object_repr": "Placa Mãe",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2022-08-11T17:50:10.258Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "4",
+    "object_repr": "Notebooks",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2022-08-11T17:52:08.471Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "3",
+    "object_repr": "Processador Intel Core i5-10400, Cache 12MB, 2.9GHz (4.3GHz Max Turbo), LGA 1200 - BX8070110400",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2022-08-11T17:52:53.539Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "3",
+    "object_repr": "Processador Intel Core i5-10400, Cache 12MB, 2.9GHz (4.3GHz Max Turbo), LGA 1200 - BX8070110400",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2022-08-11T17:53:39.919Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "3",
+    "object_repr": "Processador Intel Core i5-10400, Cache 12MB, 2.9GHz (4.3GHz Max Turbo), LGA 1200 - BX8070110400",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2022-08-11T17:53:57.204Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "3",
+    "object_repr": "Processador Intel Core i5-10400, Cache 12MB, 2.9GHz (4.3GHz Max Turbo), LGA 1200 - BX8070110400",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2022-08-11T17:55:37.997Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "3",
+    "object_repr": "Processador Intel Core i5-10400, Cache 12MB, 2.9GHz (4.3GHz Max Turbo), LGA 1200 - BX8070110400",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2022-08-11T18:41:57.032Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "3",
+    "object_repr": "Processador Intel Core i5-10400, Cache 12MB, 2.9GHz (4.3GHz Max Turbo), LGA 1200 - BX8070110400",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2022-08-11T18:44:21.187Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "3",
+    "object_repr": "Processador Intel Core i5-10400, Cache 12MB, 2.9GHz (4.3GHz Max Turbo), LGA 1200 - BX8070110400",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2022-08-11T20:34:13.205Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "3",
+    "object_repr": "Processador Intel Core i5-10400, Cache 12MB, 2.9GHz (4.3GHz Max Turbo), LGA 1200 - BX8070110400",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Quantity\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2022-08-11T20:34:18.391Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "3",
+    "object_repr": "Processador Intel Core i5-10400, Cache 12MB, 2.9GHz (4.3GHz Max Turbo), LGA 1200 - BX8070110400",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2022-08-11T20:36:05.686Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "4",
+    "object_repr": "Placa-Mãe MSI B560M-A PRO, LGA 1200, Intel B560, MATX, DDR4",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2022-08-11T20:38:01.485Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "5",
+    "object_repr": "Notebook Gamer Lenovo IdeaPad Gaming 3i Intel Core i5-10300H, GeForce GTX 1650, 8GB RAM, SSD 256GB, Tela 15.6 FHD, Linux, Azul - 82CGS00100",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2022-08-11T20:49:42.997Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "5",
+    "object_repr": "Notebook Gamer Lenovo IdeaPad Gaming 3i Intel Core i5-10300H, GeForce GTX 1650, 8GB RAM, SSD 256GB, Tela 15.6 FHD, Linux, Azul - 82CGS00100",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2022-08-11T20:53:46.550Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "6",
+    "object_repr": "Processador AMD Ryzen 5 5600X, Cache 35MB, 3.7GHz (4.6GHz Max Turbo), AM4, Sem Vídeo - 100-100000065BOX",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2022-08-11T20:59:15.740Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "5",
+    "object_repr": "Fontes",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2022-08-11T20:59:39.908Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "6",
+    "object_repr": "Kit Hardware",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2022-08-11T20:59:49.806Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "6",
+    "object_repr": "Kit-Hardware",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2022-08-11T21:45:09.350Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "7",
+    "object_repr": "Processador Intel Pentium Gold G6400 Processor, Cache 4MB, 4.00 GHz - BX80701G6400",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2022-08-11T22:08:49.496Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "3",
+    "object_repr": "Processador Intel Core i5-10400, Cache 12MB, 2.9GHz (4.3GHz Max Turbo), LGA 1200 - BX8070110400",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Discount price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2022-08-11T22:10:29.179Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "3",
+    "object_repr": "Processador Intel Core i5-10400, Cache 12MB, 2.9GHz (4.3GHz Max Turbo), LGA 1200 - BX8070110400",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Discount price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2022-08-11T22:11:52.198Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "8",
+    "object_repr": "Processador AMD Ryzen 9 5900X, Cache 70MB, 3.7GHz (4.8GHz Max Turbo), AM4 - 100-100000061WOF",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2022-08-11T22:13:42.251Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "9",
+    "object_repr": "Processador AMD Ryzen 5 4600G, Cachê 11MB, 3.7GHz (4.2GHz Max Turbo), AM4, Vídeo Integrado - 100-100000147BOX",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2022-08-11T22:15:46.504Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "10",
+    "object_repr": "Samsung Smart TV 43´´ UHD 4K 43AU7700, Processador Crystal 4K, Tela sem limites, Alexa Built In, Controle Único - UN43AU7700GXZD",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2022-08-11T22:17:32.844Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "11",
+    "object_repr": "Notebook Asus AMD Ryzen 5-3500U, 8GB RAM, SSD 256GB, 15,6', Radeon Vega 8, Windows 11 Home, Cinza - M515DA-BR1213W",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2022-08-12T03:24:24.802Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "1",
+    "object_repr": "VALE100",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "sites",
+    "model": "site"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "account",
+    "model": "emailaddress"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "account",
+    "model": "emailconfirmation"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "socialaccount",
+    "model": "socialaccount"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "socialaccount",
+    "model": "socialapp"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "socialaccount",
+    "model": "socialtoken"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "main_app",
+    "model": "billingaddress"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "main_app",
+    "model": "category"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "main_app",
+    "model": "coupon"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "main_app",
+    "model": "item"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 17,
+  "fields": {
+    "app_label": "main_app",
+    "model": "order"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 18,
+  "fields": {
+    "app_label": "main_app",
+    "model": "userprofile"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 19,
+  "fields": {
+    "app_label": "main_app",
+    "model": "refund"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 20,
+  "fields": {
+    "app_label": "main_app",
+    "model": "orderitem"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 21,
+  "fields": {
+    "app_label": "mercadopago_payment",
+    "model": "payment"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "0fbvvsodb173tis4wwbmlnakm83zdmos",
+  "fields": {
+    "session_data": ".eJxVjDEOAiEQRe9CbQggsMHS3jOQGWaQVQPJslttvLuSbKHNL_57ebuIsK0lbp2XOJO4CC1Ovx9CenIdgB5Q702mVtdlRjkUedAub434dT3cv0CBXkbWKdaTYaORPdjvpEwOjSJ03mrvcyDrEyrIaAnMGYNC7ThMQMkBifcH9Hw41A:1oDorz:safuMnyfuR4pIqQusA2ccdxme2RjpPK8PgG-5WYZBh8",
+    "expire_date": "2022-08-02T15:10:43.278Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "c9z8ferv8pej943y2hi3s0vsf03keye1",
+  "fields": {
+    "session_data": ".eJxVjsEOwiAQRP-Fc0MAgaYevfsNZJfdWtSAgTbRGP9da3rQyxxmXl7mKQIs8xSWxjUkEnuhRffbIcQL53WgM-RTkbHkuSaUKyK3tcljIb4eNvZPMEGbVq1TrHvDRiN7sJ-IIzk0itB5q70fB7I-ooIRLYHZ4aBQOx56oOjgK23cWio58P2W6kPsVSdKpe14_3oDDApEOg:1oMZeR:zlhxOTnKShP25lKz3MQk_dfkuZgrx_JEWqewGFNgBDI",
+    "expire_date": "2022-08-26T18:44:55.431Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "kl7nzev0l0cwdizi0bzaerj0m1mjcrne",
+  "fields": {
+    "session_data": ".eJxVjsEOwiAQRP-Fc9MAArU9evcbyC67tagBA22iMf671vSglznMvLzMU3hY5skvlYuPJAahRPPbIYQLp3WgM6RTbkNOc4nYrki7rbU9ZuLrYWP_BBPUadVayarTrBWyA_OJMJJFLQmtM8q5sSfjAkoY0RDoHfYSleW-AwoWvtLKtcacPN9vsTzEIBuRC23H9683DAxEOw:1oXqXI:VcR_aQcWIxHcD7UBxhBnRdshs6XPX8ewBS4WcTlZTGg",
+    "expire_date": "2022-09-26T21:00:08.733Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "n34dtv7t0obcehipqxxegkqq3u8j8v46",
+  "fields": {
+    "session_data": ".eJxVjsEOwiAQRP-Fc9MAArU9evcbyC67tagBA22iMf671vSglznMvLzMU3hY5skvlYuPJAahRPPbIYQLp3WgM6RTbkNOc4nYrki7rbU9ZuLrYWP_BBPUadVayarTrBWyA_OJMJJFLQmtM8q5sSfjAkoY0RDoHfYSleW-AwoWvtLKtcacPN9vsTzEIBuRC23H9683DAxEOw:1oMepf:-RBmecWidB6b_MxILlhC5evsMaeLeE226E5QVoSVT14",
+    "expire_date": "2022-08-27T00:16:51.160Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "pbamgoo7ewyhnzwnjj1ay52tj65wtm1o",
+  "fields": {
+    "session_data": ".eJxVjr0OAiEQhN-F2hBAfnKW9j4D2WUX79RActxVF99dSSi0mWLmy5c5RIR9m-PeeI0LiYvQ4vTbIaQnlz7QA8q9ylTLti4oOyLH2uStEr-ug_0TzNDmrnWKdTBsNLIH-42UyaFRhM5b7X2eyPqECjJaAnPGSaF2PAWg5KBL60rjZHh_APL8PP0:1oMW6M:RT8BCQ-SixeyEFX1oJLluBTT0IJr0pdvvUsIpRrqUhc",
+    "expire_date": "2022-08-26T14:57:30.931Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "re5amdl0ipe261mogp7k62dpq8maf0ar",
+  "fields": {
+    "session_data": "e30:1oMKdk:GfEk_ARajgAjrxRIP7S_l6Sn4hiHu7G2-mixFz5EpPs",
+    "expire_date": "2022-08-26T02:43:12.842Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "vno7wszr4ew21q0cs1krxuqm6jqwwwjk",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hBAoGmX7j0DmWGmFjVgoE00xrtrTRe6-Yv_Xt5TBFjmKSyNa0gkBqHF7vdDiBfOK6Az5FORseS5JpSrIjfa5LEQXw-b-xeYoE1r1inWnWGjkT3Yz8SRHBpF6LzV3o89WR9RwYiWwOyxV6gd9x1QdPCNNm4tlRz4fkv1IQb1egOvYkAR:1oMa26:XMfjYTHcqVxj2xqh0RLUVV2gAqYv26J5_nAFuix5eeA",
+    "expire_date": "2022-08-26T19:09:22.173Z"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 2,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 2,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 2,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 2,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 3,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 3,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 3,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 3,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 4,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 4,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 4,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 4,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 5,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 5,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 5,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 5,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 6,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 6,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 6,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 6,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add site",
+    "content_type": 7,
+    "codename": "add_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change site",
+    "content_type": 7,
+    "codename": "change_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete site",
+    "content_type": 7,
+    "codename": "delete_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view site",
+    "content_type": 7,
+    "codename": "view_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add email address",
+    "content_type": 8,
+    "codename": "add_emailaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change email address",
+    "content_type": 8,
+    "codename": "change_emailaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete email address",
+    "content_type": 8,
+    "codename": "delete_emailaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view email address",
+    "content_type": 8,
+    "codename": "view_emailaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add email confirmation",
+    "content_type": 9,
+    "codename": "add_emailconfirmation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change email confirmation",
+    "content_type": 9,
+    "codename": "change_emailconfirmation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete email confirmation",
+    "content_type": 9,
+    "codename": "delete_emailconfirmation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view email confirmation",
+    "content_type": 9,
+    "codename": "view_emailconfirmation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add social account",
+    "content_type": 10,
+    "codename": "add_socialaccount"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change social account",
+    "content_type": 10,
+    "codename": "change_socialaccount"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete social account",
+    "content_type": 10,
+    "codename": "delete_socialaccount"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view social account",
+    "content_type": 10,
+    "codename": "view_socialaccount"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add social application",
+    "content_type": 11,
+    "codename": "add_socialapp"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change social application",
+    "content_type": 11,
+    "codename": "change_socialapp"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete social application",
+    "content_type": 11,
+    "codename": "delete_socialapp"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view social application",
+    "content_type": 11,
+    "codename": "view_socialapp"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add social application token",
+    "content_type": 12,
+    "codename": "add_socialtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change social application token",
+    "content_type": 12,
+    "codename": "change_socialtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete social application token",
+    "content_type": 12,
+    "codename": "delete_socialtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view social application token",
+    "content_type": 12,
+    "codename": "view_socialtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add Endereço",
+    "content_type": 13,
+    "codename": "add_billingaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change Endereço",
+    "content_type": 13,
+    "codename": "change_billingaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete Endereço",
+    "content_type": 13,
+    "codename": "delete_billingaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view Endereço",
+    "content_type": 13,
+    "codename": "view_billingaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add Categoria",
+    "content_type": 14,
+    "codename": "add_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change Categoria",
+    "content_type": 14,
+    "codename": "change_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete Categoria",
+    "content_type": 14,
+    "codename": "delete_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view Categoria",
+    "content_type": 14,
+    "codename": "view_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add Cupom",
+    "content_type": 15,
+    "codename": "add_coupon"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change Cupom",
+    "content_type": 15,
+    "codename": "change_coupon"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete Cupom",
+    "content_type": 15,
+    "codename": "delete_coupon"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view Cupom",
+    "content_type": 15,
+    "codename": "view_coupon"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add Produto",
+    "content_type": 16,
+    "codename": "add_item"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change Produto",
+    "content_type": 16,
+    "codename": "change_item"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete Produto",
+    "content_type": 16,
+    "codename": "delete_item"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can view Produto",
+    "content_type": 16,
+    "codename": "view_item"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 65,
+  "fields": {
+    "name": "Can add Pedido",
+    "content_type": 17,
+    "codename": "add_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 66,
+  "fields": {
+    "name": "Can change Pedido",
+    "content_type": 17,
+    "codename": "change_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 67,
+  "fields": {
+    "name": "Can delete Pedido",
+    "content_type": 17,
+    "codename": "delete_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 68,
+  "fields": {
+    "name": "Can view Pedido",
+    "content_type": 17,
+    "codename": "view_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 69,
+  "fields": {
+    "name": "Can add Perfi",
+    "content_type": 18,
+    "codename": "add_userprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 70,
+  "fields": {
+    "name": "Can change Perfi",
+    "content_type": 18,
+    "codename": "change_userprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 71,
+  "fields": {
+    "name": "Can delete Perfi",
+    "content_type": 18,
+    "codename": "delete_userprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 72,
+  "fields": {
+    "name": "Can view Perfi",
+    "content_type": 18,
+    "codename": "view_userprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 73,
+  "fields": {
+    "name": "Can add Desistência",
+    "content_type": 19,
+    "codename": "add_refund"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 74,
+  "fields": {
+    "name": "Can change Desistência",
+    "content_type": 19,
+    "codename": "change_refund"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 75,
+  "fields": {
+    "name": "Can delete Desistência",
+    "content_type": 19,
+    "codename": "delete_refund"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 76,
+  "fields": {
+    "name": "Can view Desistência",
+    "content_type": 19,
+    "codename": "view_refund"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 77,
+  "fields": {
+    "name": "Can add ItemsCarrinho",
+    "content_type": 20,
+    "codename": "add_orderitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 78,
+  "fields": {
+    "name": "Can change ItemsCarrinho",
+    "content_type": 20,
+    "codename": "change_orderitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 79,
+  "fields": {
+    "name": "Can delete ItemsCarrinho",
+    "content_type": 20,
+    "codename": "delete_orderitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 80,
+  "fields": {
+    "name": "Can view ItemsCarrinho",
+    "content_type": 20,
+    "codename": "view_orderitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 81,
+  "fields": {
+    "name": "Can add Pagamento",
+    "content_type": 21,
+    "codename": "add_payment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 82,
+  "fields": {
+    "name": "Can change Pagamento",
+    "content_type": 21,
+    "codename": "change_payment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 83,
+  "fields": {
+    "name": "Can delete Pagamento",
+    "content_type": 21,
+    "codename": "delete_payment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 84,
+  "fields": {
+    "name": "Can view Pagamento",
+    "content_type": 21,
+    "codename": "view_payment"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$87NzubHtngfbW1UMzyCq4d$cSKCFwE9mKJDppfcqMQOSCIG98wxLhaahVlfGAMOfSw=",
+    "last_login": "2022-09-12T20:52:22.757Z",
+    "is_superuser": true,
+    "username": "heldercelso",
+    "first_name": "",
+    "last_name": "",
+    "email": "helder_celso@hotmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-07-19T15:09:19.092Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 1,
+  "fields": {
+    "domain": "example.com",
+    "name": "example.com"
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "email": "helder_celso@hotmail.com",
+    "verified": true,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 2,
+  "fields": {
+    "user": 1,
+    "email": "renan-moura85@formigueiromaquinas.com.br",
+    "verified": false,
+    "primary": false
+  }
+},
+{
+  "model": "main_app.userprofile",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "cpf": "098.007.758-38",
+    "full_name": "Renan Moura",
+    "cell_number": "(11) 991786991"
+  }
+},
+{
+  "model": "main_app.category",
+  "pk": 2,
+  "fields": {
+    "title": "Processadores",
+    "description": "Lista de processadores",
+    "slug": "proc"
+  }
+},
+{
+  "model": "main_app.category",
+  "pk": 3,
+  "fields": {
+    "title": "Placa Mãe",
+    "description": "Lista de placa mães",
+    "slug": "plmae"
+  }
+},
+{
+  "model": "main_app.category",
+  "pk": 4,
+  "fields": {
+    "title": "Notebooks",
+    "description": "Lista de notebooks",
+    "slug": "notebook"
+  }
+},
+{
+  "model": "main_app.category",
+  "pk": 5,
+  "fields": {
+    "title": "Fontes",
+    "description": "Lista de fontes",
+    "slug": "fontes"
+  }
+},
+{
+  "model": "main_app.category",
+  "pk": 6,
+  "fields": {
+    "title": "Kit-Hardware",
+    "description": "Lista de kits",
+    "slug": "kitshardware"
+  }
+},
+{
+  "model": "main_app.item",
+  "pk": 3,
+  "fields": {
+    "title": "Processador Intel Core i5-10400, Cache 12MB, 2.9GHz (4.3GHz Max Turbo), LGA 1200 - BX8070110400",
+    "description": "<b>Processador Intel Core i5-10400</b>\r\nOs novos processadores Intel Core da 10ª Geração oferecem atualizações de desempenho incríveis para melhorar a produtividade e proporcionar entretenimento surpreendente, Intel Wi-Fi 6 (Gig) tecnologia, HDR 4K, otimização de sistema inteligentes e muito mais.\r\n\r\n<b>Produtividade acelerada</b>\r\nRecursos de desempenho inteligente integrados aprendem e se adaptam ao que você faz, direcionando potência dinamicamente para onde ela é mais necessária. Os processadores Intel Core da 10ª Geração com memória Intel Optane fornecem a responsividade para fazer mais.\r\n\r\n<b>A melhor conectividade da categoria</b>\r\nCom Intel Wi-Fi 6 (Gig+) e tecnologia Thunderbolt 3 integrados, os processadores Intel Core da 10ª Geração oferecem conectividade cabeada e sem fio rápida, garantida e versátil.\r\n\r\n<b>Entretenimento premium</b>\r\nUma nova arquitetura de gráficos oferece suporte a experiências visuais ultravívidas, como vídeo em HDR 4K e jogos a 1080p. Os processadores Intel Core da 10 ª Geração com gráficos Intel Iris Plus permitem experiências de entretenimento nunca vistas.\r\n\r\n<b>Jogos sérios (serious gaming)</b>\r\nAproveite jogos incríveis com alto FPS, até mesmo enquanto realiza streaming e gravação. Turbo e aceleração da memória Intel Optane. Em casa ou em qualquer lugar, processadores Intel Core da 10ª Geração capazes de overclocking rodam as plataformas definitivas de jogos em notebooks e desktops.\r\n\r\n<b>Possui Vídeo Integrado</b>",
+    "price": "1529.40",
+    "discount_price": "999.99",
+    "category": 2,
+    "label": "P",
+    "quantity": 16,
+    "slug": "inteli5",
+    "image": "processador-intel-core-i5-10400-cache-12mb-2-9ghz-lga-1200-bx8070110400_1589200167_gg.jpg"
+  }
+},
+{
+  "model": "main_app.item",
+  "pk": 4,
+  "fields": {
+    "title": "Placa-Mãe MSI B560M-A PRO, LGA 1200, Intel B560, MATX, DDR4",
+    "description": "<b>Placa-Mãe MSI B560M-A PRO</b>\r\nA série PRO da MSI ajuda os usuários a trabalhar de forma mais inteligente, oferecendo uma experiência eficiente e produtiva. Com funcionalidade estável e montagem de alta qualidade, a placa-mãe MSI B560M-A PRO oferece fluxos de trabalho profissionais otimizados, com menos problemas e longevidade.\r\n\r\n \r\n\r\n<b>Equipada com M.2 Shield Frozr</b>\r\nOs SSDs mais rápidos do mundo podem começar a diminuir o desempenho ao aquecer. Parte do design do dissipador de calor da placa-mãe, o M.2 SHIELD FROZR é a solução térmica M.2 da próxima geração para evitar isso, oferecendo a melhor proteção térmica para garantir que o SSD mantenha o máximo desempenho.\r\n\r\n \r\n\r\n<b>Rede de Alta Lagura e Baixa Latência</b>\r\nA LAN de 2,5 Gbps oferece uma velocidade de transferência de dados incrível mais rápida do que a LAN Gigabit geral. Esta é uma solução premium para usuários exigentes.\r\n\r\n \r\n\r\n<b>Controle pela BIOS e via software</b>\r\nAs placas-mãe MSI como a B560M-A PRO permitem gerenciar velocidades e temperaturas para todos os ventiladores do seu sistema e da CPU. Ideal para verificar as características do sistema primário em uma interface simples e de fácil entendimento.\r\n\r\n \r\n\r\n<b>Design amigável para o usuário</b>\r\nDesenvolvidas para satisfazer mesmo os usuários mais inteligentes, as placas-mãe da MSI incluem ferramentas de ajuste e sistema de solução de problemas simplificado. Além disso, é fácil de instalar.\r\n\r\n \r\n\r\n<b>Compre a placa-mãe MSI B560M-A PRO no KaBuM!</b>",
+    "price": "705.87",
+    "discount_price": "519.99",
+    "category": 3,
+    "label": "D",
+    "quantity": 10,
+    "slug": "plmaemsib560",
+    "image": "placa-mae-msi-b560m-a-pro-lga-1200-intel-b560-matx-ddr4_1646854309_gg.jpg"
+  }
+},
+{
+  "model": "main_app.item",
+  "pk": 5,
+  "fields": {
+    "title": "Notebook Gamer Lenovo IdeaPad Gaming 3i Intel Core i5-10300H, GeForce GTX 1650, 8GB RAM, SSD 256GB, Tela 15.6 FHD, Linux, Azul - 82CGS00100",
+    "description": "Notebook Gamer Lenovo Gaming 3i Intel Core i5-10300H\r\n \r\n\r\n<b>O Notebook Gamer com melhor performance</b>\r\nNotebook Gamer Lenovo Gaming 3i novo design com 10 Geração de Processadores Intel Core i5-10300H e placa de vídeo NVIDIA GeForce GTX 1650 4GB, ideal para gamers e usuários que também precisam de alta performance Com tela de 15.6'' Full HD WVA Antirreflexo para melhor definição de imagem e cores. O armazenamento SSD PCIe NVMe é 10x mais rápido que um HDD 2.5” SATA, você terá mais segurança ao armazenar seus dados. \r\n\r\n \r\n\r\n<b>Design eficiente para melhor desempenho</b>\r\nO teclado retroiluminado em LED azul, deixa o computador mais atraente e também favorece a performance para jogos em lugares com pouca iluminação. Silencioso e não esquenta: projetado com um sistema de resfriamento otimizado composto por 2 coolers e 4 saídas de ar para suportar o alto desempenho do notebook. Sua privacidade pessoal é muito importante. É por isso que o Ideapad Gaming 3i está equipado com prática porta de privacidade da webcam. Quando não estiver em uma chamada de vídeo ou gravando algo, basta deslizá-la. \r\n\r\n \r\n\r\n<b>Ideapad bateria que dura e te permite jogar mais</b>\r\nCom até 9.6 horas de duração de bateria o Ideapad Gaming 3i permite que você jogue por muito mais tempo. Além de possuir a tecnologia de carregamento rápido: quinze minutos de carregamento garante até duas horas de uso. A Lenovo coloca o Ideapad Gaming 3i à prova em testes de resistência altamente estressantes como: altas e baixas temperaturas, choque térmico, quebra e vibração, certificando a preocupação com a segurança e qualidade. Através de testes militares, mantém a convicção da melhor escolha sempre. \r\n\r\n \r\n\r\n<b>Seu Notebook Gamer é no KaBuM!</b>",
+    "price": "6396.38",
+    "discount_price": "3849.99",
+    "category": 4,
+    "label": "N",
+    "quantity": 3,
+    "slug": "notideagaming3i",
+    "image": "notebook-gamer-lenovo-gaming-3i-intel-core-i5-10300h-gtx-1650-4gb-8gb-ram-256gb-ssd-linux.jpg"
+  }
+},
+{
+  "model": "main_app.item",
+  "pk": 6,
+  "fields": {
+    "title": "Processador AMD Ryzen 5 5600X, Cache 35MB, 3.7GHz (4.6GHz Max Turbo), AM4, Sem Vídeo - 100-100000065BOX",
+    "description": "Processador AMD Ryzen 5 5600X Jogue com os melhores 6 núcleos incríveis para quem quer apenas jogar. Imbatível no jogo Obtenha o desempenho de jogos de alta velocidade do melhor processador de desktop do mundo. AMD Ryzen para criadores Codifique mais rápido. Renderize mais rápido. Repita mais rápido. Crie mais e mais rápido com os processadores AMD Ryzen™. Desempenho de próximo nível para arquitetos, engenheiros e profissionais criativos Imagine o que você pode fazer com o processador mais avançado do mundo.\r\n\r\nNão possui video integrado\r\n\r\n\r\nGaranta já o seu processador AMD Ryzen 5 5600X no KaBuM!",
+    "price": "2411.75",
+    "discount_price": "1299.99",
+    "category": 2,
+    "label": null,
+    "quantity": 4,
+    "slug": "ryzen5600x",
+    "image": "processador-amd-ryzen-9-5950x-cache-72mb-3-4ghz-4-9ghz-max-turbo-am4.jpg"
+  }
+},
+{
+  "model": "main_app.item",
+  "pk": 7,
+  "fields": {
+    "title": "Processador Intel Pentium Gold G6400 Processor, Cache 4MB, 4.00 GHz - BX80701G6400",
+    "description": "Processador Intel Pentium Gold G6400\r\n \r\n\r\nOs processadores Intel Pentium Gold são ideais para a computação do dia a dia, como produtividade básica e navegação em páginas da web visualmente ricas. \r\n\r\n \r\n\r\nCom valor de desempenho incrível\r\n \r\n\r\nQuer você esteja trabalhando ou aprendendo remotamente, assistindo a conteúdo de streaming ou navegando on-line, os processadores Intel Pentium podem fornecer o que você precisa. Colabore com facilidade enquanto faz uma videoconferência, mesmo com pouca luz, graças aos recursos de rede confiáveis.\r\n\r\n \r\n\r\nAprenda, trabalhe e jogue em qualquer lugar\r\n \r\n\r\nObtenha um desempenho de alto nível sem estar vinculado. Realize multitarefas, procure aplicações e saiba mais sem precisar se preocupar em interromper para carregar.\r\n\r\n \r\n\r\nIndependentemente do que você fizer, faça com rapidez\r\n \r\n\r\nOs processadores Intel Pentium oferecem um valor de desempenho incrível. Experimente o desempenho de alto nível, incluindo navegação rápida na web e desempenho de produtividade convencional.\r\n\r\n \r\n\r\nReprodução sem interrupções\r\n \r\n\r\nOs processadores Intel Pentium possuem uma versão atualizada de gráficos Intel de baixa potência que podem ser ajustados com facilidade com o Centro de comando de gráficos Intel. Desfrute de excelentes gráficos ao jogar jogos casuais ou transmitir shows.\r\n\r\n \r\n\r\nGaranta já o seu processador Intel Pentium Gold G6400 no KaBuM!",
+    "price": "494.11",
+    "discount_price": "419.99",
+    "category": 2,
+    "label": null,
+    "quantity": 1,
+    "slug": "pentiumg6400",
+    "image": "processador-intel-pentium-gold-g6400-processor-cache-4mb-4-00-ghz_1600435408_gg.jpg"
+  }
+},
+{
+  "model": "main_app.item",
+  "pk": 8,
+  "fields": {
+    "title": "Processador AMD Ryzen 9 5900X, Cache 70MB, 3.7GHz (4.8GHz Max Turbo), AM4 - 100-100000061WOF",
+    "description": "Processador AMD Ryzen 9 5900X O melhor processador de jogos do mundo 12 núcleos para alimentar jogos, streaming e muito mais. Imbatível no jogo Obtenha o desempenho de jogos de alta velocidade do melhor processador de desktop do mundo. AMD Ryzen para criadores Codifique mais rápido. Renderize mais rápido. Repita mais rápido. Crie mais e mais rápido com os processadores AMD Ryzen™. AMD \"Zen 3\" Core Architecture Os núcleos mais rápidos do mundo para jogadores de PC Tecnologia AMD StoreMI É um jeito rápido e fácil de expandir e acelerar o armazenamento nos PCs com um processador AMD Ryzen™. Utilitário AMD Ryzen™ Master O utilitário de overclocking simples e potente para os processadores AMD Ryzen™. AMD Ryzen™ VR-Ready Premium Para usuários que querem uma experiência de realidade virtual premium, a AMD oferece os processadores de alto desempenho Ryzen™ VR-Ready Premium.\r\n\r\n\r\nNão possui video integrado",
+    "price": "4434.58",
+    "discount_price": "3769.39",
+    "category": 2,
+    "label": null,
+    "quantity": 1,
+    "slug": "ryzen9-5900x",
+    "image": "processador-amd-ryzen-9-5900x-cache-70mb-3-8ghz-4-7ghz-max-turbo-am4-gg.jpg"
+  }
+},
+{
+  "model": "main_app.item",
+  "pk": 9,
+  "fields": {
+    "title": "Processador AMD Ryzen 5 4600G, Cachê 11MB, 3.7GHz (4.2GHz Max Turbo), AM4, Vídeo Integrado - 100-100000147BOX",
+    "description": "Processador AMD Ryzen 5 4600G\r\nEsteja você jogando, trabalhando ou fazendo as tarefas do cotidiano, a velocidade sem precedentes dos processadores AMD Ryzen série 4000 G para desktop é imparável. Com os processadores AMD Ryzen para desktop, você está sempre na frente.\r\n\r\n \r\n\r\nGráficos Integrados\r\nO processador de desktop AMD Ryzen 5 4600G oferece excelentes gráficos integrados em um processador de desktop. Jogue com Radeon Graphics com 7 Núcleos de GPU e Frequência gráfica de 1900 MHz.\r\n\r\n \r\n\r\nAlta Velocidade\r\nO AMD Ryzen 5 4600G ainda conta com 6 núcleos e 12 threads, impulsionando o desempenho do seu Computador com clocks de até 4,2 Ghz com Max Boost e 8MB de cache L3 total.\r\n\r\n \r\n\r\nPremium AMD Ryzen VR-Ready\r\nPara usuários que querem uma experiência de realidade virtual premium, a AMD oferece os processadores de alto desempenho Ryzen VR-Ready Premium.",
+    "price": "1162.34",
+    "discount_price": "919.99",
+    "category": 2,
+    "label": "D",
+    "quantity": 19,
+    "slug": "ryzen5-4600x",
+    "image": "processador-amd-ryzen-5-4600g-cache-11mb-3-7ghz-4-2ghz-max-turbo-am4-video-integrado-gg.jpg"
+  }
+},
+{
+  "model": "main_app.item",
+  "pk": 10,
+  "fields": {
+    "title": "Samsung Smart TV 43´´ UHD 4K 43AU7700, Processador Crystal 4K, Tela sem limites, Alexa Built In, Controle Único - UN43AU7700GXZD",
+    "description": "Samsung Smart TV 43´´ UHD 4K\r\nO processador Crystal 4K transforma tudo o que você assiste em resolução próxima à 4K.Todos os produtos UHD 4K da Samsung são certificados pela CEA (Consumer Eletronics Association) e DE (Digital Europe).\r\n\r\nEstas entidades estabeleceram critérios mínimos para certificar um produto como o UHD 4K, entre eles, garantir que o produto tenha em cada pixel a capacidade de reproduzir todas as cores. A experiência pode variar de acordo com tipo e formato do conteúdo.",
+    "price": "3324.05",
+    "discount_price": "2249.00",
+    "category": null,
+    "label": null,
+    "quantity": 1,
+    "slug": "smarttv43uhd4k",
+    "image": "samsung-smart-tv-43-uhd-4k-43au7700-processador-crystal-4k-gg.jpg"
+  }
+},
+{
+  "model": "main_app.item",
+  "pk": 11,
+  "fields": {
+    "title": "Notebook Asus AMD Ryzen 5-3500U, 8GB RAM, SSD 256GB, 15,6', Radeon Vega 8, Windows 11 Home, Cinza - M515DA-BR1213W",
+    "description": "Asus MD15 um dos menores notebooks de 15 polegadas do mundo\r\nSeja para trabalho ou lazer, o ASUS M515 é um notebook que oferece desempenho poderoso e visuais envolventes. Sua tela NanoEdge possui um revestimento antirreflexo fosco para uma experiência verdadeiramente envolvente. O M515 é equipado com até processador AMD Ryzen e memória de 8 GB. Armazenamento rápido com SSD com até 256GB PCIe SSD.\r\n\r\n \r\n\r\nMais velocidade no seu dia a dia\r\nO ASUS M515 possui armazenamento SSD, que além de ser muito mais rápido que o HD convencional, é menor, mais leve e não tem partes mecânicas extremamente sensíveis a impactos e solavancos. Isso garante maior proteção aos dados armazenados no seu notebook, para que você possa trabalhar sem preocupações, com alto desempenho e produtividade, mesmo em um veículo em movimento.\r\n \r\n\r\nRápido e eficiente\r\nCom processadores até SérioAMD Ryzen com 8 GB de memória, o ASUS M515 ajuda você a fazer as coisas com rapidez e eficiência.\r\n\r\nTenha uma visão mais ampla do mundo\r\nA tela NanoEdge dá ao ASUS M515 uma vasta área de tela para uma experiência de visualização envolvente seja para o trabalho ou lazer. Com tela FHD de visão ampla apresenta um revestimento antirreflexo para reduzir distrações indesejadas de reflexos irritantes, para que você possa realmente se concentrar no que está à sua frente.",
+    "price": "4678.94",
+    "discount_price": "2729.99",
+    "category": 4,
+    "label": null,
+    "quantity": 1,
+    "slug": "notebookasus-ryzen5-3500U",
+    "image": "notebook-asus-amd-ryzen-5-3500u-8gb-ram-ssd-256gb-15-6-radeon-vega-8-windows-11-home-cinza_gg.jpg"
+  }
+},
+{
+  "model": "main_app.orderitem",
+  "pk": 6,
+  "fields": {
+    "user_order": 5,
+    "item": 3,
+    "quantity": 1,
+    "finished": true
+  }
+},
+{
+  "model": "main_app.orderitem",
+  "pk": 7,
+  "fields": {
+    "user_order": 6,
+    "item": 3,
+    "quantity": 2,
+    "finished": true
+  }
+},
+{
+  "model": "main_app.orderitem",
+  "pk": 8,
+  "fields": {
+    "user_order": 6,
+    "item": 9,
+    "quantity": 1,
+    "finished": true
+  }
+},
+{
+  "model": "main_app.orderitem",
+  "pk": 11,
+  "fields": {
+    "user_order": 7,
+    "item": 6,
+    "quantity": 1,
+    "finished": true
+  }
+},
+{
+  "model": "main_app.orderitem",
+  "pk": 13,
+  "fields": {
+    "user_order": 7,
+    "item": 3,
+    "quantity": 1,
+    "finished": true
+  }
+},
+{
+  "model": "main_app.orderitem",
+  "pk": 14,
+  "fields": {
+    "user_order": 8,
+    "item": 4,
+    "quantity": 2,
+    "finished": false
+  }
+},
+{
+  "model": "main_app.orderitem",
+  "pk": 15,
+  "fields": {
+    "user_order": 8,
+    "item": 6,
+    "quantity": 1,
+    "finished": false
+  }
+},
+{
+  "model": "main_app.order",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "start_date": "2022-07-19T15:10:06.533Z",
+    "finished": false,
+    "finished_date": null,
+    "billing_address": 1,
+    "paid": true,
+    "payment": 1,
+    "coupon": null,
+    "on_the_road": false,
+    "delivered": false,
+    "refund_requested": false,
+    "refund_accepted": false,
+    "ref_code": "070455f0-43a5-47ec-b601-a2ac74253a5d",
+    "items": []
+  }
+},
+{
+  "model": "main_app.order",
+  "pk": 5,
+  "fields": {
+    "user": 1,
+    "start_date": "2022-08-12T01:03:14.980Z",
+    "finished": false,
+    "finished_date": null,
+    "billing_address": 2,
+    "paid": true,
+    "payment": 2,
+    "coupon": null,
+    "on_the_road": false,
+    "delivered": false,
+    "refund_requested": false,
+    "refund_accepted": false,
+    "ref_code": "dde80e16-715f-45cf-b907-e46763256a2f",
+    "items": [
+      6
+    ]
+  }
+},
+{
+  "model": "main_app.order",
+  "pk": 6,
+  "fields": {
+    "user": 1,
+    "start_date": "2022-08-12T03:00:22.230Z",
+    "finished": false,
+    "finished_date": null,
+    "billing_address": 2,
+    "paid": true,
+    "payment": 3,
+    "coupon": 1,
+    "on_the_road": false,
+    "delivered": false,
+    "refund_requested": false,
+    "refund_accepted": false,
+    "ref_code": "4744b6c9-e578-4026-baae-d45feef1e8f1",
+    "items": [
+      8,
+      7
+    ]
+  }
+},
+{
+  "model": "main_app.order",
+  "pk": 7,
+  "fields": {
+    "user": 1,
+    "start_date": "2022-08-12T14:57:30.760Z",
+    "finished": false,
+    "finished_date": null,
+    "billing_address": 2,
+    "paid": true,
+    "payment": 4,
+    "coupon": 1,
+    "on_the_road": false,
+    "delivered": false,
+    "refund_requested": false,
+    "refund_accepted": false,
+    "ref_code": "bb370b86-aa20-4ba5-a8b8-d1d71d51df51",
+    "items": [
+      11,
+      13
+    ]
+  }
+},
+{
+  "model": "main_app.order",
+  "pk": 8,
+  "fields": {
+    "user": 1,
+    "start_date": "2022-08-13T00:16:49.168Z",
+    "finished": false,
+    "finished_date": null,
+    "billing_address": 2,
+    "paid": false,
+    "payment": null,
+    "coupon": null,
+    "on_the_road": false,
+    "delivered": false,
+    "refund_requested": false,
+    "refund_accepted": false,
+    "ref_code": null,
+    "items": [
+      15,
+      14
+    ]
+  }
+},
+{
+  "model": "main_app.billingaddress",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "address": "Rua Rio Imburana",
+    "number": 316,
+    "city": "São Paulo",
+    "state": "SP",
+    "district": "",
+    "zipcode": "08215-510",
+    "complement": "",
+    "is_active": false,
+    "default": false
+  }
+},
+{
+  "model": "main_app.billingaddress",
+  "pk": 2,
+  "fields": {
+    "user": 1,
+    "address": "Rua Eduardo Vicente Nasser",
+    "number": 560,
+    "city": "São Paulo",
+    "state": "SP",
+    "district": "",
+    "zipcode": "02344-050",
+    "complement": "",
+    "is_active": true,
+    "default": true
+  }
+},
+{
+  "model": "main_app.coupon",
+  "pk": 1,
+  "fields": {
+    "code": "VALE100",
+    "amount": "100.00",
+    "is_active": true
+  }
+},
+{
+  "model": "mercadopago_payment.payment",
+  "pk": 1,
+  "fields": {
+    "created": "2022-07-19T15:10:41.855Z",
+    "modified": "2022-07-19T15:10:41.855Z",
+    "order": 1,
+    "transaction_amount": "90.00",
+    "installments": 1,
+    "payment_method_id": "master",
+    "card_holder": "APRO",
+    "email": "teste2@gmail.com",
+    "doc_type": "CPF",
+    "doc_number": "12345678909",
+    "mercado_pago_id": "1297958953",
+    "mercado_pago_status": "approved",
+    "mercado_pago_status_detail": "accredited"
+  }
+},
+{
+  "model": "mercadopago_payment.payment",
+  "pk": 2,
+  "fields": {
+    "created": "2022-08-12T02:57:59.972Z",
+    "modified": "2022-08-12T02:57:59.972Z",
+    "order": 5,
+    "transaction_amount": "999.99",
+    "installments": 1,
+    "payment_method_id": "master",
+    "card_holder": "APRO",
+    "email": "renan-moura85@formigueiromaquinas.com.br",
+    "doc_type": "CPF",
+    "doc_number": "09800775838",
+    "mercado_pago_id": "1307529480",
+    "mercado_pago_status": "approved",
+    "mercado_pago_status_detail": "accredited"
+  }
+},
+{
+  "model": "mercadopago_payment.payment",
+  "pk": 3,
+  "fields": {
+    "created": "2022-08-12T03:25:56.697Z",
+    "modified": "2022-08-12T03:25:56.697Z",
+    "order": 6,
+    "transaction_amount": "2819.97",
+    "installments": 4,
+    "payment_method_id": "master",
+    "card_holder": "APRO",
+    "email": "renan-moura85@formigueiromaquinas.com.br",
+    "doc_type": "CPF",
+    "doc_number": "09800775838",
+    "mercado_pago_id": "1307528842",
+    "mercado_pago_status": "approved",
+    "mercado_pago_status_detail": "accredited"
+  }
+},
+{
+  "model": "mercadopago_payment.payment",
+  "pk": 4,
+  "fields": {
+    "created": "2022-08-12T19:09:20.644Z",
+    "modified": "2022-08-12T19:09:20.644Z",
+    "order": 7,
+    "transaction_amount": "2199.98",
+    "installments": 1,
+    "payment_method_id": "master",
+    "card_holder": "APRO",
+    "email": "renan-moura85@formigueiromaquinas.com.br",
+    "doc_type": "CPF",
+    "doc_number": "09800775838",
+    "mercado_pago_id": "1307678655",
+    "mercado_pago_status": "approved",
+    "mercado_pago_status_detail": "accredited"
+  }
+}
+]
