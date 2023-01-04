@@ -2,7 +2,6 @@
 
 
 from django.conf import settings
-from django.http import JsonResponse
 from django.utils import timezone
 from django.contrib import messages
 from django.views.generic import ListView, DetailView, View

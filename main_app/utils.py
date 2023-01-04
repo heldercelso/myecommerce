@@ -37,6 +37,7 @@ def cookieCart(request):
                 'item': {'slug': slug, 'pk': pk, 'title': product.title,
                         'price': product.price, 'discount_price': product.discount_price, 
                         'image': {'url': product.image.url},
+                        'get_url': product.get_url,
                         'quantity': product.quantity, # stock quantity
                         },
                 'quantity': requested_quantity, # cart quantity
@@ -46,7 +47,7 @@ def cookieCart(request):
             }
             items['all'].append(cartitem)
         except Exception as error:
-            messages.error(request, 'cookieCart utils: '+error)
+            messages.error(request, 'cookieCart utils: ' + error)
             pass
 
     return {'order': order}

@@ -1,11 +1,10 @@
 # from products.tests.factories import ProductFactory
 from decimal import Decimal
-import uuid
 import factory
 import factory.fuzzy
 
 from datetime import datetime, timedelta
-import random, string, pytz
+import random, pytz
 from django.utils.text import slugify
 
 from main_app.models import BillingAddress, Item, Order, Category, OrderItem, Coupon, UserProfile, Refund, LABEL_OPTIONS
