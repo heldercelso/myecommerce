@@ -89,13 +89,15 @@ class PaymentForm(forms.ModelForm):
         try:
             # products that are being negotiated are kept in a list and the subsequents buyers of the same product needs to wait until it finishes
             lock.acquire()
-            locked, msg = self.lock_products()
-            lock.release()
+            try:
+                locked, msg = self.lock_products()
+                if not locked:
+                    # if queue: queue.put(msg) # just for testing with threads
+                    return msg
+            finally:
+                # it is always executed even after the try return
+                lock.release()
 
-            if not locked:
-                # if queue: queue.put(msg) # just for testing with threads
-                return msg
-            
             # starting the payment by mercadopago
             cd = self.cleaned_data
             sdk = mercadopago.SDK(settings.MERCADO_PAGO_ACCESS_TOKEN)
